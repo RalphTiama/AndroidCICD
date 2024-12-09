@@ -29,6 +29,9 @@ jobs:
 
       - name: Run unit tests with Gradle
         run: ./gradlew test
+        with:
+          name: unit-test-reports
+          path: app/build/reports/tests/testDebugUnitTest/
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.4.3
